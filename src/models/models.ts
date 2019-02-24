@@ -129,7 +129,7 @@ export interface Stat {
     year: number;
 }
 
-export interface StatReport  {
+export interface IStatReport  {
     'AdCampaign.name': string | null;
     'Advertiser.company': string | null;
     'Advertiser.ref_id': string | null;

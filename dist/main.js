@@ -8,7 +8,8 @@ var Call = /** @class */ (function () {
         this._url = 'https://manor.api.hasoffers.com/Apiv3/json?NetworkToken=NETIlDlNCCAsW39apdfi33CrecceQR';
     }
     Call.prototype.getStats = function (params) {
-        this._url.concat(this._createQuery(params));
+        this._url = this._url.concat('&Target=Report&Method=getStats');
+        this._url = this._url.concat(this._createQuery(params));
         console.log(this._url);
     };
     Call.prototype.getConversions = function () { };
@@ -18,7 +19,7 @@ var Call = /** @class */ (function () {
             if (p === 'fields') {
                 for (var _i = 0, _a = params[p]; _i < _a.length; _i++) {
                     var field = _a[_i];
-                    url.concat("&fields[]=" + field);
+                    url = url.concat("&fields[]=" + field);
                 }
             }
         }
@@ -31,8 +32,8 @@ var Call = /** @class */ (function () {
 var call = new Call();
 call.getStats({
     fields: [
-        call.fields.stat.clicks,
-        call.fields.stat.conversions
+        call.fields.Stat.clicks,
+        call.fields.Stat.conversions
     ]
 });
 
@@ -40,66 +41,66 @@ call.getStats({
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Stat = {
-    ad_campaign_creative_id: 'ad_campaign_creative_id',
-    ad_campaign_id: 'ad_campaign_id',
-    advertiser_id: 'advertiser_id',
-    advertiser_manager_id: 'advertiser_manager_id',
-    affiliate_count: 'affiliate_count',
-    affiliate_id: 'affiliate_id',
-    affiliate_info1: 'affiliate_info1',
-    affiliate_info2: 'affiliate_info2',
-    affiliate_info3: 'affiliate_info3',
-    affiliate_info4: 'affiliate_info4',
-    affiliate_info5: 'affiliate_info5',
-    affiliate_manager_id: 'affiliate_manager_id',
-    browser_id: 'browser_id',
-    city_name: 'city_name',
-    clicks: 'clicks',
-    conversions: 'conversions',
-    count: 'count',
-    country_code: 'country_code',
-    cpa: 'cpa',
-    cpc: 'cpc',
-    cpm: 'cpm',
-    creative_url_id: 'creative_url_id',
-    ctr: 'ctr',
-    date: 'date',
-    device_brand: 'device_brand',
-    device_model: 'device_model',
-    device_os: 'device_os',
-    device_os_version: 'device_os_version',
-    epc: 'epc',
-    erpc: 'erpc',
-    goal_id: 'goal_id',
-    gross_clicks: 'gross_clicks',
-    gross_ctr: 'gross_ctr',
-    hour: 'hour',
-    impressions: 'impressions',
-    ltr: 'ltr',
-    mobile_carrier: 'mobile_carrier',
-    month: 'month',
-    offer_count: 'offer_count',
-    offer_file_id: 'offer_file_id',
-    offer_id: 'offer_id',
-    offer_url_id: 'offer_url_id',
-    payout: 'payout',
-    payout_type: 'payout_type',
-    profit: 'profit',
-    region_code: 'region_code',
-    revenue: 'revenue',
-    revenue_type: 'revenue_type',
-    rpa: 'rpa',
-    rpc: 'rpc',
-    rpm: 'rpm',
-    sale_amount: 'sale_amount',
-    source: 'source',
-    unique_clicks: 'unique_clicks',
-    unique_ctr: 'unique_ctr',
-    week: 'week',
-    year: 'year'
+    ad_campaign_creative_id: 'Stat.ad_campaign_creative_id',
+    ad_campaign_id: 'Stat.ad_campaign_id',
+    advertiser_id: 'Stat.advertiser_id',
+    advertiser_manager_id: 'Stat.advertiser_manager_id',
+    affiliate_count: 'Stat.affiliate_count',
+    affiliate_id: 'Stat.affiliate_id',
+    affiliate_info1: 'Stat.affiliate_info1',
+    affiliate_info2: 'Stat.affiliate_info2',
+    affiliate_info3: 'Stat.affiliate_info3',
+    affiliate_info4: 'Stat.affiliate_info4',
+    affiliate_info5: 'Stat.affiliate_info5',
+    affiliate_manager_id: 'Stat.affiliate_manager_id',
+    browser_id: 'Stat.browser_id',
+    city_name: 'Stat.city_name',
+    clicks: 'Stat.clicks',
+    conversions: 'Stat.conversions',
+    count: 'Stat.count',
+    country_code: 'Stat.country_code',
+    cpa: 'Stat.cpa',
+    cpc: 'Stat.cpc',
+    cpm: 'Stat.cpm',
+    creative_url_id: 'Stat.creative_url_id',
+    ctr: 'Stat.ctr',
+    date: 'Stat.date',
+    device_brand: 'Stat.device_brand',
+    device_model: 'Stat.device_model',
+    device_os: 'Stat.device_os',
+    device_os_version: 'Stat.device_os_version',
+    epc: 'Stat.epc',
+    erpc: 'Stat.erpc',
+    goal_id: 'Stat.goal_id',
+    gross_clicks: 'Stat.gross_clicks',
+    gross_ctr: 'Stat.gross_ctr',
+    hour: 'Stat.hour',
+    impressions: 'Stat.impressions',
+    ltr: 'Stat.ltr',
+    mobile_carrier: 'Stat.mobile_carrier',
+    month: 'Stat.month',
+    offer_count: 'Stat.offer_count',
+    offer_file_id: 'Stat.offer_file_id',
+    offer_id: 'Stat.offer_id',
+    offer_url_id: 'Stat.offer_url_id',
+    payout: 'Stat.payout',
+    payout_type: 'Stat.payout_type',
+    profit: 'Stat.profit',
+    region_code: 'Stat.region_code',
+    revenue: 'Stat.revenue',
+    revenue_type: 'Stat.revenue_type',
+    rpa: 'Stat.rpa',
+    rpc: 'Stat.rpc',
+    rpm: 'Stat.rpm',
+    sale_amount: 'Stat.sale_amount',
+    source: 'Stat.source',
+    unique_clicks: 'Stat.unique_clicks',
+    unique_ctr: 'Stat.unique_ctr',
+    week: 'Stat.week',
+    year: 'Stat.year'
 };
 exports.fields = {
-    'AdCampaign.name': 'AdCampaign.name',
+    'AdCampaign.name': 'Stat.AdCampaign.name',
     'Advertiser.company': 'Advertiser.company',
     'Advertiser.ref_id': 'Advertiser.ref_id',
     'AdvertiserManager.full_name': 'AdvertiserManager.full_name',
@@ -126,7 +127,7 @@ exports.fields = {
     'OfferUrl.preview_url': 'OfferUrl.preview_url',
     'OfferVertical.name': 'OfferVertical.name',
     'Region.name': 'Region.name',
-    stat: exports.Stat,
+    Stat: exports.Stat,
 };
 
 },{}]},{},[1]);

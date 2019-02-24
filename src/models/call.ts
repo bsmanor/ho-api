@@ -1,4 +1,4 @@
-import { StatReport } from "./models";
+import { IStatReport } from "./models";
 
 export class Call {
     networkId: string;
@@ -66,9 +66,9 @@ interface GetReferrals {
 }
 
 interface GetStatsParams {
-    fields: StatReport[];
-    filters?: StatReport[];
-    sort?: StatReport[];
+    fields: IStatReport[];
+    filters?: IStatReport[];
+    sort?: IStatReport[];
     limit?: number;
     page?: number;
     totals?: boolean;
@@ -83,4 +83,3 @@ interface GetSubscriptions {
 }
 
 let call = new Call('manor', 'NETIlDlNCCAsW39apdfi33CrecceQR');
-call.target.report.
